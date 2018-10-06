@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>try111122
+  </h1>
+
+  
+  	<tr align="center" ><font color="black">
+  		{% for j in data['s1']%}
+  		
+  			<td>{{ j['notes'] }}</td>
+  		
+  		{% endfor %}
+
+
+  		{% for j in data['s2']%}
+  		
+  			<td>{{ j['notes'] }}</td>
+  		
+  		{% endfor %}
+
+
+  		{% for j in data['s3']%}
+  		
+  			<td>{{ j['notes'] }}</td>
+  		
+  		{% endfor %}
+	
+	
+	</tr>
+
+
+{% endblock %}
