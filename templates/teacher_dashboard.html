@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<p>Welcome {{session.username}}</p>
+
+<h3>NOTES</h3>
+<table class="table table-striped"> 
+ {% for note in notes %}
+ 		<tr>
+ 			<td>{{note.notes}}</td>
+ 		</tr>
+  {% endfor %}
+</table>
+<a class="btn btn-success" href="/add_notes">ADD NOTES</a>
+<hr>
+<h3>Submission</h3>
+<table class="table table-striped">
+ {% for sub in sub %}
+ 		<tr>
+ 			<td>{{sub.submission}}</td>
+ 		</tr>
+  {% endfor %}
+</table>
+<a class="btn btn-primary" href="/add_submission">ADD SUBMISSION</a>
+<hr>
+
+<a class="btn btn-info" href="/mark">MARK ATTENDENCE</a>
+<hr>
+
+{% endblock %}
